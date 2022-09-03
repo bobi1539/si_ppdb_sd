@@ -8,15 +8,15 @@
             <form action="<?php echo base_url('login/login') ?>" method="POST">
                 <div class="form-group">
                     <label for="username">User Name</label>
-                    <input name="username" type="text" class="form-control" id="username" required>
+                    <input name="username" type="text" class="form-control" id="username" required maxlength="30">
 
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input name="password" type="password" class="form-control" id="password" required>
+                    <input name="password" type="password" class="form-control" id="password" required maxlength="30">
                 </div>
 
-                <button type="submit" class="btn btn-danger col-md-12 mb-3">Login</button>
+                <button type="submit" class="btn btn-primary col-md-12 mb-3">Login</button>
 
             </form>
 

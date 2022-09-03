@@ -73,27 +73,21 @@ class Login extends CI_Controller
 
 		$login = $this->Login_model->tampil_by_username($username);
 
-		if ($login) {
-			if (password_verify($password, $login['password'])) {
-
-				if ($login['level'] == 'admin' || $login['level'] == 'walinagari') {
-					$pegawai = $this->Pegawai_model->tampil_by_kode($login['kode_pegawai']);
-					$data_session = $login + $pegawai;
-					$this->session->set_userdata($data_session);
-					redirect('admin');
-				} else {
-					$guru = $this->Guru_model->tampil_by_kode($login['kode_guru']);
-					$data_session = $login + $guru;
-					$this->session->set_userdata($data_session);
-					redirect('user');
-				}
-			} else {
-				pesan('Password salah', 'danger');
-				redirect('login');
-			}
-		} else {
+		if (!$login) {
 			pesan('Username tidak tersedia', 'danger');
 			redirect('login');
+		}
+
+		if ($password != $login["password"]) {
+			pesan('Password salah', 'danger');
+			redirect('login');
+		}
+
+		$this->session->set_userdata($login);
+		if ($login['status'] == 'admin') {
+			redirect('data_user');
+		} else {
+			redirect('penerimaan');
 		}
 	}
 

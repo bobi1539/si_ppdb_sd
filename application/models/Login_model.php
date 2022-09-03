@@ -9,17 +9,17 @@ class Login_model extends CI_Model
     public function tampil_by_username($username)
     {
         $this->db->where('username', $username);
-        return $this->db->get('tabel_login')->row_array();
+        return $this->db->get('tb_user')->row_array();
     }
 
     public function tambah_data($data)
     {
-        $this->db->insert('tabel_login', $data);
+        $this->db->insert('tb_user', $data);
     }
 
     public function hapus_data($kode_pegawai)
     {
         $this->db->where('kode_pegawai', $kode_pegawai);
-        $this->db->delete('tabel_login');
+        $this->db->delete('tb_user');
     }
 }
