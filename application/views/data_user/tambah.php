@@ -8,19 +8,19 @@
                 <div class="card-body">
                     <div class="form-group">
                         <label for="id_user">Id User</label>
-                        <input type="text" class="form-control" id="id_user" name="id_user" required>
+                        <input type="text" class="form-control" id="id_user" name="id_user" required maxlength="30">
                     </div>
                     <div class="form-group">
                         <label for="nm_user">Nama User</label>
-                        <input type="text" class="form-control" id="nm_user" name="nm_user" required>
+                        <input type="text" class="form-control" id="nm_user" name="nm_user" required maxlength="30">
                     </div>
                     <div class="form-group">
                         <label for="username">Username</label>
-                        <input type="text" class="form-control" id="username" name="username" required>
+                        <input type="text" class="form-control" id="username" name="username" required maxlength="30">
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" name="password" required>
+                        <input type="password" class="form-control" id="password" name="password" required maxlength="30">
                     </div>
                     <div class="form-group">
                         <label for="status">Status</label>

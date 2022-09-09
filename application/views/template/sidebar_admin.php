@@ -27,6 +27,18 @@
                 <span>Data Berita</span>
             </a>
         </li>
+        <li class="nav-item <?php echo $aktif == 'data_pendidikan' ? 'active' : '' ?>">
+            <a class="nav-link" href="<?php echo base_url('data_pendidikan') ?>">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Data Pendidikan</span>
+            </a>
+        </li>
+        <li class="nav-item <?php echo $aktif == 'data_pekerjaan' ? 'active' : '' ?>">
+            <a class="nav-link" href="<?php echo base_url('data_pekerjaan') ?>">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Data Pekerjaan</span>
+            </a>
+        </li>
 
         <!-- Divider -->
         <hr class="sidebar-divider">
