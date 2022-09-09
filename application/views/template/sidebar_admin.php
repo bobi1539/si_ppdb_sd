@@ -16,10 +16,11 @@
         <hr class="sidebar-divider my-0">
 
         <!-- Nav Item - Dashboard -->
-        <li class="nav-item">
-            <a class="nav-link" href="index.html">
+        <li class="nav-item <?php echo $aktif == 'data_user' ? 'active' : '' ?>">
+            <a class="nav-link" href="<?php echo base_url('data_user') ?>">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
-                <span>Dashboard</span></a>
+                <span>Data User</span>
+            </a>
         </li>
 
         <!-- Divider -->

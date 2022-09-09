@@ -37,11 +37,7 @@
 <script>
   // Call the dataTables jQuery plugin
   $(document).ready(function() {
-    $('#table-mdta').DataTable();
-    $('#tabel-guru').DataTable();
-    $('#tabel-bantuan').DataTable();
-    $('#tabel-pegawai').DataTable();
-    $('#tabel-transaksi').DataTable();
+    $('#tabel-1').DataTable();
   });
 </script>
 

@@ -2,8 +2,13 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Login_model extends CI_Model
+class User_model extends CI_Model
 {
+
+    public function tampil_data()
+    {
+        return $this->db->get('tb_user')->result_array();
+    }
 
 
     public function tampil_by_username($username)
@@ -12,14 +17,20 @@ class Login_model extends CI_Model
         return $this->db->get('tb_user')->row_array();
     }
 
+    public function tampil_by_id($id_user)
+    {
+        $this->db->where('id_user', $id_user);
+        return $this->db->get('tb_user')->row_array();
+    }
+
     public function tambah_data($data)
     {
         $this->db->insert('tb_user', $data);
     }
 
-    public function hapus_data($kode_pegawai)
+    public function hapus_data($id_user)
     {
-        $this->db->where('kode_pegawai', $kode_pegawai);
+        $this->db->where('id_user', $id_user);
         $this->db->delete('tb_user');
     }
 }
