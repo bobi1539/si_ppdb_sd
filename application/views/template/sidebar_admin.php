@@ -51,6 +51,18 @@
                 <span>Data Kabupaten</span>
             </a>
         </li>
+        <li class="nav-item <?php echo $aktif == 'data_kecamatan' ? 'active' : '' ?>">
+            <a class="nav-link" href="<?php echo base_url('data_kecamatan') ?>">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Data Kecamatan</span>
+            </a>
+        </li>
+        <li class="nav-item <?php echo $aktif == 'data_kelurahan' ? 'active' : '' ?>">
+            <a class="nav-link" href="<?php echo base_url('data_kelurahan') ?>">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Data Kelurahan</span>
+            </a>
+        </li>
 
         <!-- Divider -->
         <hr class="sidebar-divider">

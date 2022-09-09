@@ -59,8 +59,14 @@ class Data_kabupaten extends CI_Controller
 
     public function hapus($id_kabupaten)
     {
-        $this->Kabupaten_model->hapus_data($id_kabupaten);
-        pesan('Data kabupaten berhasil dihapus', 'success');
-        redirect('data_kabupaten');
+        $kabupaten_by_id = $this->Kecamatan_model->tampil_by_id_kabupaten($id_kabupaten);
+        if ($kabupaten_by_id) {
+            pesan('Data kabupaten gagal dihapus karena ada di kecamatan', 'danger');
+            redirect('data_kabupaten');
+        } else {
+            $this->Kabupaten_model->hapus_data($id_kabupaten);
+            pesan('Data kabupaten berhasil dihapus', 'success');
+            redirect('data_kabupaten');
+        }
     }
 }
