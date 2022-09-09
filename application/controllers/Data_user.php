@@ -33,17 +33,6 @@ class Data_user extends CI_Controller
 		$this->load->view('template/footer');
 	}
 
-	public function ubah($id_user)
-	{
-		$data['aktif'] = 'data_user';
-		$data['data_user'] = $this->User_model->tampil_by_id($id_user);
-		$this->load->view('template/header');
-		$this->load->view('template/sidebar_admin', $data);
-		$this->load->view('data_user/ubah', $data);
-		$this->load->view('template/end_sidebar');
-		$this->load->view('template/footer');
-	}
-
 	public function tambah_aksi()
 	{
 		$id_user = $this->input->post('id_user', true);

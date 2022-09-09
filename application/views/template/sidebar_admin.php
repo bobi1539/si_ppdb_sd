@@ -15,11 +15,16 @@
         <!-- Divider -->
         <hr class="sidebar-divider my-0">
 
-        <!-- Nav Item - Dashboard -->
         <li class="nav-item <?php echo $aktif == 'data_user' ? 'active' : '' ?>">
             <a class="nav-link" href="<?php echo base_url('data_user') ?>">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Data User</span>
+            </a>
+        </li>
+        <li class="nav-item <?php echo $aktif == 'data_berita' ? 'active' : '' ?>">
+            <a class="nav-link" href="<?php echo base_url('data_berita') ?>">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Data Berita</span>
             </a>
         </li>
 
