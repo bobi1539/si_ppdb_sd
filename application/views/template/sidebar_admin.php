@@ -63,6 +63,12 @@
                 <span>Data Kelurahan</span>
             </a>
         </li>
+        <li class="nav-item <?php echo $aktif == 'data_agama' ? 'active' : '' ?>">
+            <a class="nav-link" href="<?php echo base_url('data_agama') ?>">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Data Agama</span>
+            </a>
+        </li>
 
         <!-- Divider -->
         <hr class="sidebar-divider">
