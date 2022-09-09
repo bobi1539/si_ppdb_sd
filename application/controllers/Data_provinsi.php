@@ -56,8 +56,14 @@ class Data_provinsi extends CI_Controller
 
     public function hapus($id_provinsi)
     {
-        $this->Provinsi_model->hapus_data($id_provinsi);
-        pesan('Data provinsi berhasil dihapus', 'success');
-        redirect('data_provinsi');
+        $provinsi_di_kabupaten = $this->Kabupaten_model->tampil_by_id_provinsi($id_provinsi);
+        if ($provinsi_di_kabupaten) {
+            pesan('Data provinsi tidak bisa dihapus karena ada di kabupaten', 'danger');
+            redirect('data_provinsi');
+        } else {
+            $this->Provinsi_model->hapus_data($id_provinsi);
+            pesan('Data provinsi berhasil dihapus', 'success');
+            redirect('data_provinsi');
+        }
     }
 }

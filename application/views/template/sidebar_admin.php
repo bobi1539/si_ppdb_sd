@@ -45,6 +45,12 @@
                 <span>Data Provinsi</span>
             </a>
         </li>
+        <li class="nav-item <?php echo $aktif == 'data_kabupaten' ? 'active' : '' ?>">
+            <a class="nav-link" href="<?php echo base_url('data_kabupaten') ?>">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Data Kabupaten</span>
+            </a>
+        </li>
 
         <!-- Divider -->
         <hr class="sidebar-divider">
